@@ -16,7 +16,10 @@ void  cpu_work_no_malloc(int size){
 
 int main(void){
   for(int i = 0; i < 100; i++){
-    cpu_work_no_malloc(10);
+    cpu_work_no_malloc(i);
+  }
+  for(int i = 1000; i > 0; i --){
+    cpu_work_no_malloc(i);
   }
   return 0;
 }

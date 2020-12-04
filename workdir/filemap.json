@@ -1,0 +1,14 @@
+[
+  {
+    "name": "control_flow_invariant",
+    "result": "Несмотря на две функции, трогается кеш (мисс или попал -- неважно) все равно три раза"
+  },
+  {
+    "name": "function_indeterminance_work",
+    "result": "Не срабатыват bam, хотя уже 5"
+  },
+  {
+    "name": "function_repeat_invariant",
+    "result": "Странное поведение"
+  }
+]

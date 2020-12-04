@@ -1,14 +1,19 @@
 int __VERIFIER_nondet_int(void);
 
-void compute_some_values(){
-  static int array [1000];
-  for(int i = 1; i < 100; i++){
-    array[i-1] = __VERIFIER_nondet_int();
+int compute_some_values(){
+  if(__VERIFIER_nondet_int()){
+    return 1;
   }
+  return -1;
 }
 
 void main(void){
-  for(int i = 0; i < 10; i++){
-    compute_some_values();
+  free((void*)0);
+  int accumulated = 1;
+  for(int i = 0; i < 10000; i++){
+    accumulated *= compute_some_values();
+    if(accumulated > 0){
+      free(0);
+    }
   }
 }
